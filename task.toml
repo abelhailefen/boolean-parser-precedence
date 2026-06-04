@@ -1,0 +1,25 @@
+schema_version = "1.3"
+
+[task]
+name = "afterquery/boolean-parser-precedence"
+description = "Fix operator precedence and boolean logic evaluation in a custom expression parser."
+authors = [{ name = "Abel Hailemariam", email = "abelhailefen2@gmail.com" }]
+keywords = ["compilers", "parsers", "debugging", "python"]
+
+[metadata]
+difficulty_explanation = "The agent must identify that standard operator precedence (NOT > AND > OR) is violated by the parser and restructure the grammar parser methods."
+category = "Compilers, Parsers & Language Internals"
+
+[verifier]
+timeout_sec = 60.0
+
+[agent]
+timeout_sec = 180.0
+
+[environment]
+network_mode = "no-network"
+build_timeout_sec = 300.0
+os = "linux"
+cpus = 1
+memory_mb = 1024
+storage_mb = 2048
